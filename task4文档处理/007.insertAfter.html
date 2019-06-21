@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+    <p>I would like to say: </p>
+    <div id="foo">Hello</div>
+    <button>点击我</button>
+
+</body>
+<script>
+    /**
+     *  插入到元素后面, 跟append类似
+     *
+     *
+     */
+    function f() {
+        $("p").insertAfter("#foo");
+    };
+
+    $(function () {
+        $("button").click(function () {
+            f();
+        });
+    });
+
+</script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<style>
+    .classRed{
+        background-color: red;
+    }
+</style>
+<body>
+
+    <p class="classRed"><p>hello world</p></p>
+    <button id="btn1">获取html</button>
+    <button id="btn2">设置html</button>
+
+</body>
+<script>
+    /**
+     *    取出第一个匹配的html语言
+     *    或者  设置所有html语言
+     */
+    function f1(){
+        console.log($("p").html());;
+    }
+
+    function f2(){
+        $("p").html("<h1>hello world</h1>");
+    }
+
+    $(function () {
+        $("#btn1").click(function () {
+            f1();
+        })
+        $("#btn2").click(function () {
+            f2();
+        })
+    });
+
+
+</script>
+</html>

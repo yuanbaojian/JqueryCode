@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<style>
+    .classRed{
+        background-color: red;
+    }
+</style>
+<body>
+
+    <input type="text" name="name"/>
+    <button id="btn1">获取val</button>
+    <button id="btn2">设置val</button>
+
+</body>
+<script>
+    /**
+     *    获取 匹配元素的值
+     *    或者   设置匹配元素的值
+     *
+     */
+    function f1(){
+        alert($("input").val());
+    }
+
+    function f2(){
+        $("input").val("val加载的");
+    }
+
+    $(function () {
+        $("#btn1").click(function () {
+            f1();
+        })
+        $("#btn2").click(function () {
+            f2();
+        })
+    });
+
+
+</script>
+</html>

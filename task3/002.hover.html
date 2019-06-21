@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+    <h1>
+    <p>Hello world</p>
+    </h1>
+</body>
+<script>
+    /**
+     * 悬停事件
+     * 注1： 进入红， 出来绿。一开始不动，就没颜色变化
+     * 注2： hover里两个函数，分别表示移入， 移除
+     */
+    $(function () {
+        $("p").hover(function () {
+            $("p").css("background", "red");
+        },function () {
+            $("p").css("background","green");
+            }
+        )
+    })
+
+</script>
+</html>

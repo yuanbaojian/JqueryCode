@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+    <p id="hello">hello world</p>
+    <div id="div1">
+        <p>have a nice day</p>
+    </div>
+    <a class="click">click me </a>
+
+</body>
+<script>
+    /**
+     *    $("#id")  id选择器
+     *    $("div")  元素选择器
+     *    $(".class")  类选择器
+     */
+    console.log($("p")[0]);   //一共有两个p 元素对象
+    console.log($("#div1"));
+    console.log($(".click"));
+</script>
+</html>

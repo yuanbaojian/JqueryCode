@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+    <p>world</p>
+    <button>变身</button>
+</body>
+<script>
+    /**
+     * 前置追加内容
+     * 就是把内容加到目标元素   前面
+     *
+     */
+    $(function () {
+        $("button").click(function () {
+            $("p").prepend("<p>hello</p>");
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+<p>hello</p>
+<p>world</p>
+<button>变大</button>
+
+</body>
+<script>
+    /**
+     *   就加一次， 最外面加，最大范围保留原始结构
+     *
+     *
+     */
+    function f() {
+        $("p").wrapAll("<h1></h1>");
+        console.log($("p"));
+    };
+
+    $(function () {
+        $("button").click(function () {
+            f();
+        });
+    });
+
+</script>
+</html>

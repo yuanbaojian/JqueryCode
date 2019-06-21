@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+<p>hello</p><p>world</p>
+<button id="btn1">变大</button>
+
+<div class="container">
+    <div class="inner first">first</div>
+    <div class="inner second">second</div>
+    <div class="inner third">third</div>
+</div>
+
+<button id="btn2">点我</button>
+
+</body>
+<script>
+    /**
+     *  将匹配到的元素进行替换
+     *
+     *  replaceWith 是剪切替换， 原有的会消失
+     *
+     */
+    function f() {
+        $("p").replaceWith("<b>替换的内容</b>");
+        console.log($("p"));
+    };
+
+    function f2(){
+        $(".third").replaceWith($(".first"))
+    }
+
+    $(function () {
+            $("#btn1").click(function () {
+                f();
+            }),
+                $("#btn2").click(function () {
+                    f2();
+                });
+    });
+
+</script>
+</html>

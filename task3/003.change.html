@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+     <textarea class="field"></textarea>
+
+</body>
+    <script>
+        /**
+         * 文本域  (textarea ,  select ,  text) 变化， 则加载change函数，
+         */
+        $(function () {
+            $(".field").change(function () {
+                $(this).css("background", "red");
+            })
+        })
+    </script>
+</html>

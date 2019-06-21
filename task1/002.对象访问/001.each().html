@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../../static/jquery.js"></script>
+<body>
+
+<ul>
+    <li>first</li>
+    <li>second</li>
+</ul>
+
+<button>显示文本内容</button>
+</body>
+
+<script>
+    /**
+     * each
+     * 遍历相同的元素，进行处理
+     * 注1 ：text()是个函数，需要加括号
+     * 注2 : each是同类型的继续执行
+     *  $(document).ready(function(){}) 与  $(function(){})类似， 都是页面加载完成后运行
+     */
+    $(function () {
+        $("button").click(function () {
+            $("li").each(function () {
+                alert($(this).text());
+            })
+        })
+    })
+
+
+
+
+</script>
+</html>

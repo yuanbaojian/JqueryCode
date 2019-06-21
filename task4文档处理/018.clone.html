@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="inner first">first</div>
+
+    <div class="inner second">second</div>
+
+    <div class="inner third">third</div>
+
+</div>
+
+<button id="btn2">克隆</button>
+
+</body>
+<script>
+    /**
+     *    克隆元素， 并选中克隆的副本
+     *    clone(true/flase),  true表示    处理函数也被克隆; false则不会
+     *
+     */
+
+    function f2(){
+        $(".first").clone().prependTo(".first");
+    }
+
+    $(function () {
+        $("#btn2").click(function () {
+            f2();
+        });
+    });
+
+</script>
+</html>

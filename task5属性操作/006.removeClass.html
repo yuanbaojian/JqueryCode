@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<style>
+    .classRed{
+        background-color: red;
+    }
+</style>
+<body>
+
+<p>hello</p>
+<p>world</p>
+<button id="btn1">addClass</button>
+<button id="btn2">removeClass</button>
+
+
+
+</body>
+<script>
+    /**
+     *    删除类
+     *    .表示类,  声明时使用   .classRed表示这是个类    使用时不需要
+     */
+    function f1(){
+        $("p").addClass("classRed");
+    }
+    function f2(){
+        $("p").removeClass("classRed");
+    }
+
+
+
+    $(function () {
+        $("#btn1").click(function () {
+            f1();
+        })
+        $("#btn2").click(function () {
+            f2();
+        })
+    });
+
+
+</script>
+</html>

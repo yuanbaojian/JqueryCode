@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+
+<div class="container">
+    <div class="inner first">first</div>
+
+    <div class="inner second">second</div>
+
+    <div class="inner third">third</div>
+
+</div>
+
+<button id="btn2">删除</button>
+
+</body>
+<script>
+    /**
+     *  删除所有匹配的元素
+     *    但与之绑定的事件会保留， 不像remove
+     *
+     */
+
+    function f2(){
+        $(".second").detach();
+    }
+
+    $(function () {
+        $("#btn2").click(function () {
+            f2();
+        });
+    });
+
+</script>
+</html>

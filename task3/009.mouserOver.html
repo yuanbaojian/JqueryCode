@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+   <h1> <p>悬停变色</p></h1>
+</body>
+<script>
+    /**
+     * 鼠标悬停事件
+     */
+    $(function () {
+        $("p").mouseover(function () {
+            $(this).css("background","red");
+        })
+    })
+</script>
+</html>

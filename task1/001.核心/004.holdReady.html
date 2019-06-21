@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../../static/jquery.js"></script>
+
+
+<body>
+<button id="first" >我想喝水</button>
+<button id="second">先倒水</button>
+</body>
+<script>
+    /**
+     * 暂定或恢复   .ready的事件
+     * 写在下方才行， 以后js代码尽量写在下方
+     */
+
+    $.holdReady(true);
+    $(document).ready(function() {
+            $("#first").click(function() {
+                alert("有水喝了");
+            })
+        }
+    )
+
+    $("#second").click(function() {
+        $.holdReady(false);
+    })
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+    请输入姓名  ： <input type="text" name="name"/>
+    请输入密码  ： <input type="text" name="password"/>
+
+
+</body>
+<script>
+    /**
+     * 聚焦事件， 让人更容易注意
+     * 使用了属性选择器
+     */
+    $(function () {
+        $("input[name='name']").focus(function () {
+            //this.blur();
+            $(this).css("background","green");
+        });
+    })
+</script>
+</html>

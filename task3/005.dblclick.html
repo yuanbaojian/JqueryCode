@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+    <button>双击有惊喜</button>
+
+</body>
+<script>
+    /**
+     * 这就要问老铁了， 因为是双击
+     * 双击实践
+     * 注1：这些事件函数，括号里得在加function(){}函数体
+     * 注2：具体操作写在添加的函数体内
+     */
+    $(function () {
+        $("button").dblclick(function () {
+            alert("惊喜！");
+        })
+    })
+
+
+</script>
+</html>

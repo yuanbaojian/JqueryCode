@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../../static/jquery.js"></script>
+<body>
+
+<ul>
+    <li>hello</li>
+    <li>world</li>
+</ul>
+
+</body>
+<script>
+    /**
+     *   返回 使用的原始选择器。
+     *   简单讲， 你告诉你 你用什么搜索方法搜索的
+     */
+
+    $("ul")
+        .append("<li>" + $("ul").selector + "</li>")
+        .append("<li>" + $("ul li").selector + "</li>")
+
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../../static/jquery.js"></script>
+<script>
+
+    $(function () {
+        /**
+         *   创建div元素,并添加到Body中
+         */
+        $("<div><h1>hello world</h1></div>").appendTo("body");
+
+
+
+        /**
+         * 注意：
+         * 1. <div> 需要加尖括号
+         * 2. toggle 添加或移除类
+         */
+
+        $("<div>",{
+                "class" : "test",
+                "text" : "welcome",
+                click: function () {
+                    $(this).toggleClass("test");
+                }
+            }
+        ).appendTo("body");
+
+
+        /**
+         *将<input>添加到form里
+         *  注1： 逗号分隔， 分号结尾
+         *  foucs in 聚焦的意思
+         */
+        $("<input>",{
+            "type" : "text",
+             val : "Test",
+             focusin: function () {
+                 $(this).addClass("active")
+             },
+             focusin:function () {
+               $(this).removeClass("active");
+                 
+             }
+            }
+        ).appendTo("form")
+    })
+
+</script>
+<body>
+
+<form style="border: blue">
+
+</form>
+
+</body>
+</html>

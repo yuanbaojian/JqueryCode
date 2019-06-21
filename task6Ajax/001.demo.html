@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+
+<body>
+    <div id="div1"> 这里是原始内容 </div>
+    <button onclick="loadXMLDoc()">调用ajax</button>
+</body>
+
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp;
+            /**
+             *  XMLHttpRequest 用于后台与数据库交换信息， 就不用完全重新加载页面
+             */
+            //chrome等现代浏览器 使用 XMLHttpRequest
+            if(window.XMLHttpRequest)
+            {
+                //实例化， 不能再忘了这个了！！！！
+                xmlhttp=new XMLHttpRequest();
+            }
+            //    IE 5/6使用ActiveXOject
+            else
+            {
+                xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.onreadystatechange=function () {
+                //页面已加载完成， 下面的已加载完成的条件
+                //readyState=4表示请求完成， 且响应就绪
+                //status返回状态码   200就是ok
+
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    //获得了服务器响应， 返回字符串形式的响应response.Text
+                    document.getElementById("div1").innerHTML=xmlhttp.responseText;
+                }
+            }
+
+            //局部刷新
+            /**
+             * 向服务器发送请求
+             * open(method, url, async)
+             *       XMLHttpRequest作用于ajax时， async必须为true
+             * send  只用适用于send
+             */
+            xmlhttp.open("get","ajax.txt",true);
+            xmlhttp.send();
+        }
+    </script>
+</html>

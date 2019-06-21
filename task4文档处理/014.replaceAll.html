@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+<p>hello</p><p>world</p>
+<button id="btn1">替换内容</button>
+
+<div class="container">
+    <div class="inner first">first</div>
+    <div class="inner second">second</div>
+    <div class="inner third">third</div>
+</div>
+
+<button id="btn2">点我</button>
+
+</body>
+<script>
+    /**
+     *  跟append ,appendTo一个意思， 就是前后顺序不同而已
+     *
+     *
+     */
+    function f() {
+        $("<b>替换的内容</b>").replaceAll("p");
+        console.log($("p"));
+    };
+
+    function f2(){
+        $(".third").replaceWith($(".first"))
+    }
+
+    $(function () {
+        $("#btn1").click(function () {
+            f();
+        }),
+            $("#btn2").click(function () {
+                f2();
+            });
+    });
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+
+<p style="background-color: blue">hello</p>
+<p>world</p>
+<button id="btn1">prop</button>
+<button id="btn2">removeProp</button>
+</body>
+<script>
+    /**
+     *  删除由 prop()设置的 属性
+     */
+    function f1(){
+        $("p").prop("style", "background-color: green");
+    }
+
+    function f2(){
+        $("p").removeProp("style");
+    }
+
+    $(function () {
+        $("#btn1").click(function () {
+            f1();
+        }),
+            $("#btn2").click(function () {
+                f2();
+            });
+    });
+
+
+</script>
+</html>

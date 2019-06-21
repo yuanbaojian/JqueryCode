@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../static/jquery.js"></script>
+</head>
+<body>
+<p> hello world</p>
+<button>点击隐藏</button>
+
+</body>
+<script>
+    /**
+     * 顾名思义，点击事件
+     */
+    $(function () {
+        $("button").click(
+            function () {
+                $("p").hide();
+            }
+        )
+    })
+</script>
+</html>
